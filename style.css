@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #a8edea, #fed6e3);
+    color: #2d3748;
+    overflow-x: hidden;
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: float 60s linear infinite;
+    z-index: -1;
+}
+
+@keyframes float {
+    from { transform: translate(0, 0); }
+    to { transform: translate(-200px, -200px); }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10%;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+}
+
+nav a {
+    text-decoration: none;
+    margin-left: 20px;
+    color: #2d3748;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff7eb3;
+}
+
+.hero {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 42px;
+    font-family: 'Playfair Display', serif;
+}
+
+.hero span {
+    color: #ff7eb3;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(to bottom, #74b9ff, #dfe6e9);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.cloud {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.9;
+}
+
+
+.cloud::before,
+.cloud::after {
+    content: "";
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+}
+
+
+.cloud1 {
+    width: 200px;
+    height: 60px;
+    top: 20%;
+    left: -250px;
+    animation: moveClouds 60s linear infinite;
+}
+
+.cloud1::before {
+    width: 100px;
+    height: 100px;
+    top: -40px;
+    left: 30px;
+}
+
+.cloud1::after {
+    width: 80px;
+    height: 80px;
+    top: -20px;
+    left: 110px;
+}
+
+.cloud2 {
+    width: 250px;
+    height: 70px;
+    top: 40%;
+    left: -300px;
+    animation: moveClouds 90s linear infinite;
+}
+
+.cloud2::before {
+    width: 120px;
+    height: 120px;
+    top: -50px;
+    left: 40px;
+}
+
+.cloud2::after {
+    width: 90px;
+    height: 90px;
+    top: -30px;
+    left: 140px;
+}
+
+.cloud3 {
+    width: 180px;
+    height: 55px;
+    top: 65%;
+    left: -200px;
+    animation: moveClouds 75s linear infinite;
+}
+
+.cloud3::before {
+    width: 90px;
+    height: 90px;
+    top: -35px;
+    left: 25px;
+}
+
+.cloud3::after {
+    width: 70px;
+    height: 70px;
+    top: -20px;
+    left: 95px;
+}
+
+@keyframes moveClouds {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(140vw);
+    }
+}
+
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: #ffb7c5;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #2d3748;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ff7eb3;
+    color: white;
+}
+
+.section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(6px);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255,255,255,0.5);
+}
+
